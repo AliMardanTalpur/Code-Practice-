@@ -1,5 +1,6 @@
 #include<iostream>
 #include<conio.h>
+
 using namespace std;
 
 int main(){
@@ -22,6 +23,8 @@ long amount;
 long balance = 10000;
 string deposite;
 int selection_no;
+//5
+//int i;
 //---------------------------------------
 
 //Pre made profile
@@ -192,7 +195,7 @@ system("CLS");
 //Balance Chack
 
 
-else if(selection_no == 3)
+else if(selection_no == 4)
 
 {
 
@@ -200,10 +203,47 @@ system("CLS");
     cout<<"Type In Your Account Pin : ";
     cin>>pin;
 
+
     if (pin == 9999)
     {
         cout<<"Your Current Balance Is : "<<balance<<endl<<endl;
     }
+    else
+    {
+        cout<<"Invalid Pin Code"<<endl;
+        cout<<"Press Enter to Try Again / Press Esc to Exit"<<endl;
+        //if(getch())
+        if(getch() == 13)
+        {
+        cout<<"Type In Your Account Pin : ";
+        cin>>pin;
+
+        if (pin == 9999)
+        {
+        cout<<"Your Current Balance Is : "<<balance<<endl<<endl;
+        }
+        }
+        }
+        if(pin != 9999)
+        {
+            cout<<"------------------Exiting------------------";
+        }
+        else if(getch() == 27)
+        {
+            cout<<"------------------Exiting------------------";
+        }
+
+    } 
+
+//---------------------------------------//---------------------------------------//---------------------------------------
+//Exit 
+
+//cin>>i;
+
+ if(selection_no == 5)
+{
+cout<<"Closing window";
+exit(5);
 }
 
 
